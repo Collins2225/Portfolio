@@ -382,7 +382,7 @@
 
         .about-content {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1.2fr 1fr;
             gap: 4rem;
             align-items: start;
         }
@@ -402,22 +402,14 @@
             font-weight: 600;
         }
 
-        /* Profile Photo Styling */
-        .profile-photo-container {
+        /* Profile Photo */
+        .profile-section {
             display: flex;
             flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .profile-photo {
-            position: relative;
-            width: 100%;
-            max-width: 450px;
-            margin: 0 auto;
+            gap: 2rem;
         }
 
         .profile-photo-frame {
-            position: relative;
             border-radius: 12px;
             overflow: hidden;
             border: 2px solid rgba(0, 212, 255, 0.3);
@@ -768,10 +760,6 @@
             .section-title {
                 font-size: 2.5rem;
             }
-
-            .profile-photo {
-                max-width: 350px;
-            }
         }
 
         @media (max-width: 768px) {
@@ -790,18 +778,6 @@
             .project-metrics {
                 grid-template-columns: 1fr;
             }
-        }
-
-        /* Scroll Animation */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease-out;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
         }
     </style>
 </head>
@@ -834,7 +810,7 @@
                 <div class="hero-text">
                     <h1>Robotics Perception Engineer</h1>
                     <h2>Building Intelligent Systems That See, Understand & Act</h2>
-                    <p>Mechatronics & Robotics Engineering student specializing in computer vision, AI, and autonomous systems. I design and deploy perception pipelines that enable robots to interact intelligently with the physical world.</p>
+                    <p>Mechatronics & Robotics Engineering student specializing in Autonomous Vehicles and Robotic Manipulation. Passionate about computer vision and AI-driven perception systems that enable robots to intelligently navigate and interact with complex real-world environments.</p>
                     <div class="pipeline">
                         Sensors → Perception → Inference → Decision → Action
                     </div>
@@ -867,22 +843,21 @@
     <!-- About Section -->
     <section id="about">
         <div class="container">
-            <div class="section-header fade-in">
+            <div class="section-header">
                 <div class="section-label">Background</div>
                 <h2 class="section-title">About Me</h2>
                 <p class="section-subtitle">Driven by the challenge of teaching machines to perceive and interact with the world</p>
             </div>
             <div class="about-content">
-                <div class="about-text fade-in">
-                    <p>I'm a Mechatronics and Robotics Engineering student with a passion for <span class="highlight">computer vision</span>, <span class="highlight">machine learning</span>, and <span class="highlight">autonomous systems</span>. My focus is on the intersection of AI and robotics—specifically, building perception systems that enable intelligent decision-making.</p>
-                    <p>What excites me most is the <span class="highlight">full pipeline</span>: from raw sensor data to actionable intelligence. I enjoy working on challenging problems that require both theoretical understanding and practical implementation, whether that's training custom vision models, optimizing ROS perception nodes, or deploying AI on edge devices.</p>
-                    <p>My goal is to contribute to the next generation of <span class="highlight">autonomous systems</span> that can navigate, manipulate, and understand complex real-world environments.</p>
+                <div class="about-text">
+                    <p>I'm a <span class="highlight">Mechatronics and Robotics Engineering student</span> specializing in <span class="highlight">Autonomous Vehicles</span> and <span class="highlight">Robotic Manipulation</span>. My journey into AI-powered robotics began when I built a deep learning-based object detection system for an autonomous robot—a project that fundamentally shaped my passion for perception-driven robotic systems.</p>
+                    <p>Working with <span class="highlight">YOLO and OpenCV</span> ignited something special in me. There's a unique thrill in teaching machines to see and understand their environment, transforming raw visual data into intelligent decisions. This experience deepened my fascination with the perceptive side of robotics and opened my eyes to the incredible potential of computer vision in real-world applications.</p>
+                    <p>Beyond vision systems, I've explored the broader landscape of AI through projects like an <span class="highlight">AI voice-controlled assistant</span> with multi-layer authentication and distance-optimized speech recognition. Each project reinforces my belief that AI is the key to creating truly intelligent robotic systems that can seamlessly interact with our world.</p>
+                    <p>My goal is to pursue <span class="highlight">research in AI robotics</span>, pushing the boundaries of what autonomous systems can achieve. I'm driven by the challenge of building robots that don't just follow commands, but truly perceive, understand, and adapt to complex, dynamic environments.</p>
                 </div>
-                <div class="profile-photo-container">
-                    <div class="profile-photo">
-                        <div class="profile-photo-frame">
-                            <img src="profile-photo.jpg" alt="Profile Photo">
-                        </div>
+                <div class="profile-section">
+                    <div class="profile-photo-frame">
+                        <img src="profile-photo.jpg" alt="Professional Photo">
                     </div>
                     <div class="focus-areas">
                         <div class="focus-card">
@@ -906,79 +881,80 @@
     <!-- Projects Section -->
     <section id="projects">
         <div class="container">
-            <div class="section-header fade-in">
+            <div class="section-header">
                 <div class="section-label">Portfolio</div>
                 <h2 class="section-title">Featured Projects</h2>
                 <p class="section-subtitle">Applied AI and perception systems for real robotic platforms</p>
             </div>
             <div class="projects-grid">
                 <!-- Project 1 -->
-                <div class="project-card fade-in">
+                <div class="project-card">
                     <div class="project-visual">
                         <div class="project-icon" style="color: var(--accent-cyan);">🤖</div>
                     </div>
                     <div class="project-content">
-                        <span class="project-tag">Computer Vision · YOLO · ROS</span>
-                        <h3>Autonomous Navigation with Real-Time Object Detection</h3>
-                        <p class="project-desc">Developed an end-to-end perception system for autonomous mobile robot navigation. Implemented YOLOv8 for real-time obstacle detection and integrated with ROS navigation stack. The system processes camera feeds at 30 FPS, identifies obstacles, and dynamically updates costmaps for safe path planning.</p>
+                        <span class="project-tag">Computer Vision · YOLO · Deep Learning</span>
+                        <h3>Deep Learning Object Detection for Autonomous Robot</h3>
+                        <p class="project-desc">Built a real-time perception system for an autonomous mobile robot using deep learning-based object detection. Implemented YOLO architecture with OpenCV for processing camera feeds, enabling the robot to identify and track obstacles, navigate complex environments, and make intelligent path-planning decisions. This project sparked my passion for perception-driven robotics and demonstrated the power of computer vision in real-world autonomous systems.</p>
                         <div class="tech-stack">
                             <span class="tech-tag">Python</span>
-                            <span class="tech-tag">PyTorch</span>
-                            <span class="tech-tag">ROS2</span>
-                            <span class="tech-tag">OpenCV</span>
                             <span class="tech-tag">YOLO</span>
+                            <span class="tech-tag">OpenCV</span>
+                            <span class="tech-tag">Deep Learning</span>
+                            <span class="tech-tag">Computer Vision</span>
                         </div>
                         <div class="project-metrics">
                             <div class="metric">
-                                <span class="metric-value">30fps</span>
-                                <span class="metric-label">Inference</span>
+                                <span class="metric-value">Real-time</span>
+                                <span class="metric-label">Detection</span>
                             </div>
                             <div class="metric">
-                                <span class="metric-value">92%</span>
-                                <span class="metric-label">mAP Score</span>
+                                <span class="metric-value">Multi-object</span>
+                                <span class="metric-label">Tracking</span>
                             </div>
                             <div class="metric">
-                                <span class="metric-value">15ms</span>
-                                <span class="metric-label">Latency</span>
+                                <span class="metric-value">Autonomous</span>
+                                <span class="metric-label">Navigation</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 2 -->
-                <div class="project-card fade-in">
+                <div class="project-card">
                     <div class="project-visual">
-                        <div class="project-icon" style="color: var(--accent-green);">📷</div>
+                        <div class="project-icon" style="color: var(--accent-green);">🎤</div>
                     </div>
                     <div class="project-content">
-                        <span class="project-tag">Deep Learning · Segmentation</span>
-                        <h3>Semantic Segmentation for Robotic Manipulation</h3>
-                        <p class="project-desc">Built a custom semantic segmentation model for identifying graspable objects in cluttered environments. Trained U-Net architecture on synthetic and real-world datasets, achieving precise pixel-level classification. Integrated with robotic arm for pick-and-place tasks in industrial settings.</p>
+                        <span class="project-tag">AI · Speech Recognition · Security</span>
+                        <h3>AI Voice-Controlled Assistant with Multi-Layer Authentication</h3>
+                        <p class="project-desc">Developed an intelligent voice-controlled media assistant featuring advanced multi-layer authentication and distance-optimized speech recognition. Implemented wake word detection, dynamic microphone sensitivity adjustment for varying distances, and secure voice-based password verification. The system demonstrates sophisticated natural language processing and robust security mechanisms, showcasing the broader applications of AI beyond traditional robotics.</p>
                         <div class="tech-stack">
-                            <span class="tech-tag">TensorFlow</span>
-                            <span class="tech-tag">U-Net</span>
-                            <span class="tech-tag">MoveIt</span>
-                            <span class="tech-tag">PCL</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Speech Recognition</span>
+                            <span class="tech-tag">NLP</span>
+                            <span class="tech-tag">Security</span>
+                            <span class="tech-tag">AI</span>
                         </div>
                         <div class="project-metrics">
                             <div class="metric">
-                                <span class="metric-value">87%</span>
-                                <span class="metric-label">IoU</span>
+                                <span class="metric-value">Multi-layer</span>
+                                <span class="metric-label">Security</span>
                             </div>
                             <div class="metric">
-                                <span class="metric-value">5K</span>
-                                <span class="metric-label">Dataset</span>
+                                <span class="metric-value">Distance</span>
+                                <span class="metric-label">Optimized</span>
                             </div>
                             <div class="metric">
-                                <span class="metric-value">25fps</span>
-                                <span class="metric-label">Real-time</span>
+                                <span class="metric-value">Wake Word</span>
+                                <span class="metric-label">Detection</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 3 -->
-                <div class="project-card fade-in">
+                <!-- Project 3 - Placeholder -->
+                <div class="project-card">
                     <div class="project-visual">
                         <div class="project-icon" style="color: var(--accent-orange);">🗺️</div>
                     </div>
@@ -1015,13 +991,13 @@
     <!-- Skills Section -->
     <section id="skills">
         <div class="container">
-            <div class="section-header fade-in">
+            <div class="section-header">
                 <div class="section-label">Technical Stack</div>
                 <h2 class="section-title">Skills & Expertise</h2>
                 <p class="section-subtitle">Core competencies in perception, AI, and robotics software</p>
             </div>
             <div class="skills-grid">
-                <div class="skill-category fade-in">
+                <div class="skill-category">
                     <h3>🔍 Computer Vision & AI</h3>
                     <ul class="skill-list">
                         <li>Object Detection (YOLO, Faster R-CNN)</li>
@@ -1033,7 +1009,7 @@
                         <li>Edge Deployment & Optimization</li>
                     </ul>
                 </div>
-                <div class="skill-category fade-in">
+                <div class="skill-category">
                     <h3>⚙️ Robotics Software</h3>
                     <ul class="skill-list">
                         <li>ROS / ROS2 Development</li>
@@ -1045,7 +1021,7 @@
                         <li>Hardware Integration</li>
                     </ul>
                 </div>
-                <div class="skill-category fade-in">
+                <div class="skill-category">
                     <h3>💻 Programming & Tools</h3>
                     <ul class="skill-list">
                         <li>Python (NumPy, Pandas, Matplotlib)</li>
@@ -1064,23 +1040,23 @@
     <!-- Interests Section -->
     <section id="interests">
         <div class="container">
-            <div class="section-header fade-in">
+            <div class="section-header">
                 <div class="section-label">Research Focus</div>
                 <h2 class="section-title">Areas of Interest</h2>
                 <p class="section-subtitle">Exploring the future of autonomous intelligent systems</p>
             </div>
             <div class="interests-grid">
-                <div class="interest-card fade-in">
+                <div class="interest-card">
                     <span class="interest-icon">🚗</span>
                     <h3>Autonomous Vehicles</h3>
                     <p>Perception systems for self-driving cars, including sensor fusion, object tracking, and scene understanding for safe autonomous navigation.</p>
                 </div>
-                <div class="interest-card fade-in">
+                <div class="interest-card">
                     <span class="interest-icon">🦾</span>
                     <h3>Robotic Manipulation</h3>
                     <p>Vision-guided grasping, 6D pose estimation, and learning-based approaches for robotic manipulation in unstructured environments.</p>
                 </div>
-                <div class="interest-card fade-in">
+                <div class="interest-card">
                     <span class="interest-icon">🧠</span>
                     <h3>Embodied AI</h3>
                     <p>Integrating vision, language, and action for robots that can understand and execute complex tasks in real-world scenarios.</p>
@@ -1092,17 +1068,17 @@
     <!-- Contact Section -->
     <section id="contact">
         <div class="container">
-            <div class="section-header fade-in">
+            <div class="section-header">
                 <div class="section-label">Get in Touch</div>
                 <h2 class="section-title">Let's Connect</h2>
             </div>
-            <div class="contact-content fade-in">
+            <div class="contact-content">
                 <p>I'm actively seeking opportunities in robotics perception, autonomous systems, and AI research. Whether it's internships, research collaborations, or full-time positions—I'd love to connect and explore how we can work together.</p>
                 <div class="contact-links">
-                    <a href="/cdn-cgi/l/email-protection#5a23352f28743f373b33361a3f223b372a363f74393537" class="contact-btn">
+                    <a href="mailto:your.email@example.com" class="contact-btn">
                         📧 Email Me
                     </a>
-                    <a href="https://github.com/yourusername" class="contact-btn" target="_blank">
+                    <a href="https://github.com/collins2225" class="contact-btn" target="_blank">
                         💻 GitHub
                     </a>
                     <a href="https://linkedin.com/in/yourprofile" class="contact-btn" target="_blank">
@@ -1123,7 +1099,7 @@
         </div>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script>
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -1136,24 +1112,6 @@
                     });
                 }
             });
-        });
-
-        // Intersection Observer for fade-in animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
         });
 
         // Active nav link on scroll
@@ -1172,4 +1130,11 @@
 
             navLinks.forEach(link => {
                 link.style.color = '';
-                if (link.getAttribute('href').slice(1)
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.style.color = 'var(--accent-cyan)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
