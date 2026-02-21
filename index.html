@@ -953,33 +953,34 @@
                     </div>
                 </div>
 
-                <!-- Project 3 - Placeholder -->
+                <!-- Project 3 -->
                 <div class="project-card">
                     <div class="project-visual">
-                        <div class="project-icon" style="color: var(--accent-orange);">🗺️</div>
+                        <div class="project-icon" style="color: var(--accent-orange);">🎯</div>
                     </div>
                     <div class="project-content">
-                        <span class="project-tag">SLAM · Sensor Fusion</span>
-                        <h3>Visual-Inertial SLAM for Indoor Mapping</h3>
-                        <p class="project-desc">Implemented visual-inertial odometry combining camera and IMU data for robust localization in GPS-denied environments. Developed feature tracking and loop closure detection algorithms. Deployed on embedded hardware for real-time 3D mapping of indoor spaces.</p>
+                        <span class="project-tag">Visual Servoing · Control Systems · Simulation</span>
+                        <h3>Visual Servoing System (Simulation-Based)</h3>
+                        <p class="project-desc">Implemented a vision-based closed-loop control system for a simulated robotic arm. The robot uses camera feedback to detect and track a target object and adjusts its motion in real-time to minimize positional error. The system demonstrates the integration of computer vision, control systems, and robotics simulation in a fully software-based environment, showcasing the practical application of visual feedback for precise robotic manipulation.</p>
                         <div class="tech-stack">
-                            <span class="tech-tag">C++</span>
-                            <span class="tech-tag">ORB-SLAM</span>
-                            <span class="tech-tag">Kalman Filter</span>
-                            <span class="tech-tag">Jetson</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Computer Vision</span>
+                            <span class="tech-tag">Control Theory</span>
+                            <span class="tech-tag">Robotics Simulation</span>
+                            <span class="tech-tag">Real-time Feedback</span>
                         </div>
                         <div class="project-metrics">
                             <div class="metric">
-                                <span class="metric-value">0.3m</span>
-                                <span class="metric-label">Accuracy</span>
+                                <span class="metric-value">Real-time</span>
+                                <span class="metric-label">Tracking</span>
                             </div>
                             <div class="metric">
-                                <span class="metric-value">20Hz</span>
-                                <span class="metric-label">Update Rate</span>
+                                <span class="metric-value">Closed-loop</span>
+                                <span class="metric-label">Control</span>
                             </div>
                             <div class="metric">
-                                <span class="metric-value">500m²</span>
-                                <span class="metric-label">Area Mapped</span>
+                                <span class="metric-value">Vision-based</span>
+                                <span class="metric-label">Feedback</span>
                             </div>
                         </div>
                     </div>
@@ -1075,7 +1076,7 @@
             <div class="contact-content">
                 <p>I'm actively seeking opportunities in robotics perception, autonomous systems, and AI research. Whether it's internships, research collaborations, or full-time positions—I'd love to connect and explore how we can work together.</p>
                 <div class="contact-links">
-                    <a href="mailto:collinsnjoku42@gmail.com" class="contact-btn">
+                    <a href="/cdn-cgi/l/email-protection#a0c3cfccccc9ced3cecacfcbd59492e0c7cdc1c9cc8ec3cfcd" class="contact-btn">
                         📧 Email Me
                     </a>
                     <a href="https://github.com/collins2225" class="contact-btn" target="_blank">
@@ -1099,7 +1100,7 @@
         </div>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -1125,9 +1126,4 @@
                 const sectionHeight = section.clientHeight;
                 if (scrollY >= (sectionTop - 200)) {
                     current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.style.color = '';
-                if (link.getAttribute('href').slice(1)
+            
